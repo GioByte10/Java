@@ -1,0 +1,14 @@
+
+public class AboutMe{
+  public static void main(String[] args){
+  
+  
+    System.out.println("Welcome to the AP CS A");
+  
+    System.out.println("Also known as:");
+    
+    System.out.println("The Advanced Placement Computer Science A course");
+  
+  
+  }
+}

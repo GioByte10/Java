@@ -1,0 +1,12 @@
+
+public class Life {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Programming is Life");
+		System.out.println("Programming\n     is\n\tLife");
+		System.out.println("============================");
+		
+	}
+
+}
