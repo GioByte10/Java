@@ -1,21 +1,22 @@
 import java.util.Scanner;
 
-
-public class Math {
+class Math{
 	
 	public static void main(String[] args) {
 		
-		Scanner scan = new Scanner(System.in);
 		double x, y;
+				
+		Scanner scan = new Scanner(System.in);
 		
-		System.out.println("Enter 2 decimal numbers");
-		
+		System.out.println("Enter 2 numbers");
 		x = scan.nextDouble();
 		y = scan.nextDouble();
 		
-		System.out.print(x + " " + y);
-		
+		System.out.println(x + " + " + y + " = " + (1.0 * (x + y)));
+		System.out.println(x + " - " + y + " = " + (1.0 * (x - y)));
+		System.out.println(x + " * " + y + " = " + (1.0 * (x * y)));
+		System.out.print(x + " / " + y + " = " + (1.0 * (x / y)));
+				
 		
 	}
-
 }

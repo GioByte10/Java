@@ -14,7 +14,7 @@
  * Notice there is exactly one space between the numbers.
 */
 
-import java.util.Scanner;
+import java.util.Scanner; 
 import java.lang.Math;
 
 class Lesson_4_Activity_One {
