@@ -6,67 +6,80 @@ public class Program {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		double North = 0, South = 0, East = 0, West = 0, lon = 0, lat = 0;
-		int count = 1;
+		System.out.println("Type the message to be shortened");
+		String message = scan.nextLine();
+		String correct = "";
+		String fin = "";
 		
-		while(count != 0) {
-			count = scan.nextInt();
+		int len = message.length();
+		char x;
+		int c = 0, letters = 0, vowels = 0;
 		
-		System.out.println("Please enter the latitude:");
-		lat = scan.nextDouble();
-		System.out.println("Please enter the longitude:");
-		lon = scan.nextDouble();
+		if(len > 10) {
+			
+			message = message.toLowerCase();
+			
+while (c < len) {
+				
+				x = message.charAt(c);
+				
+				if(c > 0 && message.charAt(c - 1) == x && !(x == 'a' || x == 'e' || x == 'i' || x == 'o' || x == 'u')) {
+					
+					c++;
+					letters ++;
+					
+				}else {
+					
+					correct += x;
+					c++;
+					
+				}
+				
+			}
+			
+			
+			
+			System.out.println(correct);
+			c = 0;
+			
 		
-		if((lat < -90 || lat > 90) || (lon < -180 || lon > 180)) {
-			System.out.println("Incorrect Latitude or Longitude");
+			
+			
+			len = correct.length();
+			
+while (c < len) {
+				
+				x = correct.charAt(c);
+				
+				if(c > 0 && (x == 'a' || x == 'e' || x == 'i' || x == 'o' || x == 'u') && correct.charAt(c - 1) != ' ') {
+					
+					c++;
+					vowels++;
+					
+				}else {
+					
+					fin += x;
+					c++;
+					
+				}
+				
+			}
+			
+
+
+System.out.println("Shortened message: " + fin);	
+System.out.println("Repeated letters removed: " + letters);	
+System.out.println("Vowels removed: " + vowels);	
+System.out.println("Total characters saved " + (message.length() - fin.length()));	
+
+			
+			
+			
 		}else {
 			
-			if (lat < 0) {
-				if (lat * -1 > South) {
-					
-					South = lat * -1;
-					
-				}
-			}else {
-				
-                 if (lat > North) {
-					
-					North = lat;
-					
-				}
-				
-			}
-			
-			if (lon < 0) {
-				if (lon * -1 > West) {
-					
-					West = lon * -1;
-					
-				}
-			}else {
-				
-                 if (lon> East) {
-					
-					East = lon;
-					
-				}
-				
-			}
-			
+			System.out.println("This doesn't need shortening!");
 			
 		}
-		
-		System.out.println("Would you like to enter another location?");
-		
-		count = scan.nextInt();
-		
-		}
-		
-		System.out.println("Farthest North:" + North);
-		System.out.println("Farthest South:" + South);
-		System.out.println("Farthest East:" + East);
-		System.out.println("Farthest West:" + West);
-		
 		
 		
 		
