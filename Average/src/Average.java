@@ -5,25 +5,36 @@ class Average {
     
 	  Scanner scan = new Scanner(System.in);
 	  
-	  System.out.println("Enter a String");
-	  String s = scan.nextLine();
+	  int test[] = new int[5];
+	  
+	  test[0] = 0;
+	  test[1] = 1;
+	  test[2] = 2;
+	  test[3] = 3;
+	  test[4] = 4;
+	  
+      for (int k = 0; k < test.length; k++) {
+		  
+		  System.out.print(test[k] + " ");
+		  
+	  }
 	  
 	  
-	  int x = s.length();
-	  int c = 0, i = 0;
+	  int ins = scan.nextInt();
+	  int ins2 = ins;
 	  
-	  while(c < x) {
+	  for (int i = ins + 1; i < test.length; i++) {
 		  
+		  test[i - 1] = test[i];
 		  
-		  while(i < c) {
-			  System.out.print("\t");
-			  i++;
-		  }
+	  }
+	  
+	  
+	  
+	  for (int j = 0; j < test.length; j++) {
 		  
-		  System.out.println(s.charAt(c));
-		  i = 0;
+		  System.out.print(test[j] + " ");
 		  
-		  c++;
 	  }
 	  
 	  
