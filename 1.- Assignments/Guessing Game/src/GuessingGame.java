@@ -11,11 +11,11 @@ public class GuessingGame {
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("Welcome to the Guessing Game!");
-		System.out.println("To win, you have to either guess the number from 1 to whatever or a range you can select");
-		
-		
+		System.out.println("To win, you have to either guess the number from 1 to whatever or a range you can select");	
 		
 		do {
+			
+			keepPlaying = ""; 
 			
 			while(!(rangeOrNot.toLowerCase().contentEquals("yes") || rangeOrNot.toLowerCase().contentEquals("no"))) {
 				
@@ -28,27 +28,25 @@ public class GuessingGame {
 				
 				System.out.println("Enter the Max Value of the range (No more than 2147483647)");	
 				MaxValue = scan.nextInt();
-				NumToGuess = (int) (Math.random() * MaxValue + 1);
-				
-                
-				
-				
+				NumToGuess = (int) (Math.random() * MaxValue + 1);		
 				
 			}else if (rangeOrNot.toLowerCase().equals("no")) {
 				
-				NumToGuess = (int) (Math.random() * 2147483647 + 1);	
-				
+				NumToGuess = (int) (Math.random() * 2147483647 + 1);		
 				
 			}
-				
 			}
 			
 			System.out.println(NumToGuess);
-			System.out.println("Guess the Number!");
+			System.out.println("Guess the Number!  (-1 to exit)");
 			
 			while(LastNumber != NumToGuess) {
 				
 				LastNumber = scan.nextInt();
+				
+				if(LastNumber == -1)
+					break;
+				
 				
 			   if(LastNumber > NumToGuess) 
 				   System.out.println("Enter a smaller number");
@@ -60,6 +58,7 @@ public class GuessingGame {
 			   
 			}
 			
+			if(LastNumber != -1) {
 			scan.nextLine();
 			rangeOrNot = "";
 			LastNumber = 0;
@@ -68,15 +67,11 @@ public class GuessingGame {
 			System.out.println("Do you want to keep playing? (yes/no)");
 			
 			count = 0;			
-			keepPlaying = scan.nextLine();
-			
+			keepPlaying = scan.nextLine();	
+			}
 						
 		}while(keepPlaying.toLowerCase().contentEquals("yes"));
-		
-		
-		scan.close();
-		
-
+				
+		scan.close();		
 	}
-
 }
