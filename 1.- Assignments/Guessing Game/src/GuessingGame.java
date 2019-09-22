@@ -47,7 +47,6 @@ public class GuessingGame {
 				if(LastNumber == -1)
 					break;
 				
-				
 			   if(LastNumber > NumToGuess) 
 				   System.out.println("Enter a smaller number");
 			   
