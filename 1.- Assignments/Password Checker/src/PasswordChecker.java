@@ -43,23 +43,19 @@ public class PasswordChecker {
 		
 		while(option != 5) {
 			
-			if(option == 3) {
-				
+			if(option == 3)
 			    createAccount();
 		       
-			}else if(option == 4) {
-				
+			else if(option == 4) 
 				showAccounts();
 				
-			}else if(option == 2) {
-				
+			else if(option == 2) 
 				logOut();
 				
-			}else if(option == 1) {
-				
+			else if(option == 1) 
 				logIn();
 				
-			}
+		
 			
 			do {
 				option = scan.nextInt();
