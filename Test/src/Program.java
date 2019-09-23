@@ -70,7 +70,7 @@ while (c < len) {
 System.out.println("Shortened message: " + fin);	
 System.out.println("Repeated letters removed: " + letters);	
 System.out.println("Vowels removed: " + vowels);	
-System.out.println("Total characters saved " + (message.length() - fin.length()));	
+System.out.println("Total characters save " + (message.length() - fin.length()));	
 
 			
 			
