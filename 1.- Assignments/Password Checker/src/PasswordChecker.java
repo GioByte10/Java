@@ -16,7 +16,7 @@ public class PasswordChecker {
 		System.out.println("(-1) To Log In\n(-2) To Log Out\n(-5) To Exit");
 		System.out.println("It seems there are no accounts. You will have to create one.");
 		
-		while(option != -3) {
+		while(option != -3) { 
 			
 			option = scan.nextInt();
 			
