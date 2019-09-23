@@ -140,7 +140,16 @@ public class PasswordChecker {
 				}	
 			}
 			
-			option = scan.nextInt();
+			do {
+				option = scan.nextInt();
+				if(!(option == -1 || option == -2 || option == -3 || option == -4 || option == -5))
+				  System.out.println("That is not a valid command");	
+			}
+			
+			while(!(option == -1 || option == -2 || option == -3 || option == -4 || option == -5));
+				
+			
+			
 		}	
 	}
 }
