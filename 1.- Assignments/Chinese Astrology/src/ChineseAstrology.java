@@ -2,58 +2,7 @@ import java.util.Scanner;
 
 public class ChineseAstrology {
 	
-	public static void main(String []args) {
-		
-		Scanner scan = new Scanner(System.in);
-		
-		System.out.println("What is your year or birth?");
-		int year = scan.nextInt();
-		
-		int animal = year % 12;
-		
-		if(animal == 0)
-			Monkey();
-		
-		else if (animal == 1)
-			Rooster();
-		
-		else if (animal == 2)
-			Dog();
-		
-		else if (animal == 3)
-			Pig();
-		
-		else if (animal == 4)
-			Rat();
-		
-		else if (animal == 5)
-			Ox();
-		
-		else if (animal == 6)
-			Tiger();
-		
-		else if (animal == 7)
-			Rabbit();
-		
-		else if (animal == 8)
-			Dragon();
-		
-		else if (animal == 9)
-			Snake();
-		
-		else if (animal == 10)
-			Horse();
-		
-		else if (animal == 11)
-			Goat();
-			
-		
-		
-		scan.close();
-		
-	}
-	
-	public static void Monkey() {
+public static void Monkey() {
 		
 		System.out.println("Your Chinese zodiac sign is a Monkey");
 		System.out.println("The Monkey is the ninth of 12 animals in the recurring 12-year Chinese zodiac cycle.");
@@ -149,4 +98,61 @@ public class ChineseAstrology {
     	
         }
 
-}
+
+
+
+	
+	public static void main(String []args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("What is your year or birth?");
+		int year = scan.nextInt();
+		
+		int animal = year % 12;
+		
+		if(animal == 0)
+			Monkey();
+		
+		else if (animal == 1)
+			Rooster();
+		
+		else if (animal == 2)
+			Dog();
+		
+		else if (animal == 3)
+			Pig();
+		
+		else if (animal == 4)
+			Rat();
+		
+		else if (animal == 5)
+			Ox();
+		
+		else if (animal == 6)
+			Tiger();
+		
+		else if (animal == 7)
+			Rabbit();
+		
+		else if (animal == 8)
+			Dragon();
+		
+		else if (animal == 9)
+			Snake();
+		
+		else if (animal == 10)
+			Horse();
+		
+		else if (animal == 11)
+			Goat();
+			
+		
+		
+		scan.close();
+		
+	}
+	
+	}
+	
+	
