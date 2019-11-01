@@ -5,76 +5,101 @@ public class WritinMethods {
 	public static void main(String args[]) {
 		
 		Scanner scan = new Scanner(System.in);
-		String temp = "";
+		String temp = "", temp2 = "";
+		int temp3;
 		
-		/*System.out.println("What is your name?");
-		Greetings(scan.nextLine());
+		System.out.println("What is your name?");
+		greetings(scan.nextLine());
 		
 		System.out.println("Enter your name");
 		temp = scan.nextLine();
 		System.out.println("Enter your last name");
-		System.out.println(FullName(temp, scan.nextLine()));
+		System.out.println(fullName(temp, scan.nextLine()));
 		
 		System.out.println("Enter a String with a space");
-		RemoveSpace(scan.nextLine());
+		removeSpace(scan.nextLine());
 		
 		System.out.println("Enter a String to get its length");
-		GetLength(scan.nextLine());
+		getLength(scan.nextLine());
 		
 		System.out.println("Enter your name");
 		temp = scan.nextLine();
 		System.out.println("Enter your last name");
-		ReverseName(temp, scan.nextLine());
+		reverseName(temp, scan.nextLine());
 		
 		System.out.println("Write a message");
-		FiveTimes(scan.nextLine());
+		fiveTimes(scan.nextLine());
 		
 		System.out.println("Write a message");
 		temp = scan.nextLine();
 		System.out.println("How many times to repeat it?");
-		NTimes(temp, scan.nextInt());
+		nTimes(temp, scan.nextInt());
 		
 		scan.nextLine();
 		
 		System.out.println("Input a String");
 		temp = scan.nextLine();
 		System.out.println("Input another String");
-		Longer(temp, scan.nextLine());
+		longer(temp, scan.nextLine());
 		
 		System.out.println("Input a String");
 		temp = scan.nextLine();
 		System.out.println("Input another a String");	
-		Palindrome(temp, scan.nextLine());
-		*/
+		palindrome(temp, scan.nextLine());
+		
 		
 		System.out.println("Input a String");	
-		System.out.println(NumberOfSpaces(scan.nextLine()) + " \n");
+		System.out.println(numberOfSpaces(scan.nextLine()) + " \n");
 		
 		System.out.println("Input a String");
 		temp = scan.nextLine();
 		System.out.println("Input a character");
-		System.out.println(Appears(temp, scan.next().charAt(0)) + "\n");
+		System.out.println(appears(temp, scan.next().charAt(0)) + "\n");
+		
+		scan.nextLine();
 		
 		System.out.println("Input a String");
 		temp = scan.nextLine();
 		System.out.println("Input a character");
-		System.out.println(IndexOfCharacter(temp, scan.next().charAt(0)) + " \n");
+		temp2 = scan.nextLine();
+		if(indexOfCharacter(temp, temp2.charAt(0)) == -1)
+		System.out.println("False");
+		else
+		System.out.println((indexOfCharacter(temp, temp2.charAt(0)) + 1) + " \n");
+		
+		boolean bool = true;
+		System.out.println("Enter a String");
+		System.out.println(lowerUpper(scan.nextLine(), bool));
+		
+		System.out.println("Enter a String");
+		temp = scan.nextLine();
+		System.out.println("Enter a range:\nStart");
+		temp3 = scan.nextInt();
+		System.out.println("End:");
+		System.out.println(subString(temp, temp3, scan.nextInt())); 
+		
+		System.out.println(randomLetter());
+		
+		
+		
+		
+		
 		
 		
 	}
 	
 	
-	public static void Greetings(String name) {
+	public static void greetings(String name) {
 		
 		System.out.println("Greetings " + name + "\n");
 	}
 	
-	public static String FullName(String first, String last) {
+	public static String fullName(String first, String last) {
 		
 		return first + " " + last + "\n";
 	}
 	
-	public static void RemoveSpace(String space) {
+	public static void removeSpace(String space) {
 		
 		String noSpace = "";
 		
@@ -87,17 +112,17 @@ public class WritinMethods {
 		System.out.println(noSpace + "\n");
 	}
 	
-	public static void GetLength(String x) {
+	public static void getLength(String x) {
 		
 		System.out.println(x.length() + "\n");
 	}
 	
-	public static void ReverseName(String name, String last) {
+	public static void reverseName(String name, String last) {
 		
 		System.out.println(last + ", " + name + "\n");		
 	}
 	
-	public static void FiveTimes(String mes) {
+	public static void fiveTimes(String mes) {
 		
 		System.out.println(mes);
 		System.out.println(mes);
@@ -106,7 +131,7 @@ public class WritinMethods {
 		System.out.println(mes + "\n");
 	}
 	
-    public static void NTimes(String mes, int n) {
+    public static void nTimes(String mes, int n) {
 		
 		for(;n > 0; n--) {
 			
@@ -115,7 +140,7 @@ public class WritinMethods {
 		System.out.println();
 	}
     
-    public static void Longer(String x, String y){
+    public static void longer(String x, String y){
     	
     	if(x.length() > y.length()) 
     		System.out.println(x + "is longer");
@@ -131,7 +156,7 @@ public class WritinMethods {
     	
     }
     
-    public static void Palindrome(String x, String y) {
+    public static void palindrome(String x, String y) {
     	
     	boolean right = true;
     	
@@ -154,7 +179,7 @@ public class WritinMethods {
     }
     }
     
-    public static int NumberOfSpaces(String sen) {
+    public static int numberOfSpaces(String sen) {
     	
     	int n = 0;
     	
@@ -168,7 +193,7 @@ public class WritinMethods {
     	return n;
     }
     
-    public static int Appears(String x, char chara) {
+    public static int appears(String x, char chara) {
     	
     	int n = 0;
     	
@@ -181,6 +206,48 @@ public class WritinMethods {
     	
     	return n;
     	
+    }
+    
+    public static int indexOfCharacter(String x, char chara) {
+    	
+    	int n = -1;
+    	
+    	for(int i = 0; i < x.length(); i++) {
+    		
+    		if(x.charAt(i) == chara) {
+    			n = i;
+    			break;
+    		}
+        
+    	}
+    	
+    	return n;
+    }
+    
+    public static String lowerUpper(String word, boolean cond) {
+    	
+    	if (cond)
+    		word = word.toUpperCase();
+    	else 
+    		word = word.toLowerCase();
+    	
+    	return word;
+    		    		
+    }
+    public static String subString(String x, int n, int m) {
+    	
+    	if(m <= x.length())
+    		return x.substring(n, m);
+    	else
+    		return "Not valid";
+    		
+    
+    }
+    
+    public static char randomLetter() {
+    	
+    	char c = (char) ((Math.random() * 25) + 65);
+    	return c;
     }
 	
 }
