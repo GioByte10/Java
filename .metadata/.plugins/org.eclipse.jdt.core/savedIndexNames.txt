@@ -4,7 +4,6 @@ INDEX VERSION 1.131+C:\Users\super\Desktop\Giovanni\Programacion\Lenguajes\Java\
 980029179.index
 1174830787.index
 2520379515.index
-660608964.index
 1821544937.index
 1066039421.index
 713818288.index
