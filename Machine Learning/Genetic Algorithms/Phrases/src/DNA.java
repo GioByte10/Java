@@ -3,8 +3,7 @@
 	 
 	 int size, targetL;
 	 String[] populationArr = new String[size];
-	 String target;
-	 	 
+	 String target;	 	 
 	
 	public DNA (Population population, String array[]) {
 		
@@ -14,7 +13,6 @@
 	   target = population.target;		
 		
 	}
-	
 	
 	void generateDNA() {
 		
@@ -45,12 +43,9 @@
 		
                if(populationArr[i].charAt(j) == target.charAt(j))
             	   fitness[i]++;
-    	   
 			}
-    	   
 		}
-		return fitness;
 		
+		return fitness;
 	}
-	
 }
