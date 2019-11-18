@@ -107,7 +107,7 @@ class Population {
 			if(populationArray[i].equals(target)) {
 				
 				gotIt = true;
-				System.out.println("Here it is: " + populationArray[i]);
+				System.out.println("Here it is: " + populationArray[i] + "  " + i);
 				break;
 				
 			}

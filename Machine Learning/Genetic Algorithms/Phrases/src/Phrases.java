@@ -29,13 +29,12 @@ public class Phrases {
 		while(true){
 		
 		population.fitness = dna1.generateFitness();
+		if(!dna1.possible) {
+			System.out.println("Not enough variation");
+			break;
+		}
 		
-		for(i = 0; i < population.populationArray.length; i++) {
-			
-			System.out.println(population.populationArray[i] + " " + population.fitness[i]);
-			//Thread.sleep(1);
-			
-			}
+		
 			
 		
 		population.generateMatingPool();
@@ -43,18 +42,12 @@ public class Phrases {
 		if(population.checkPhrase())
 			break;
 		
-		
-		
-		
-		
-		
-		
-		//for(i = 0; i < population.matingPool.length; i++) {
+        for(i = 0; i < population.populationArray.length; i++) {
 			
-			//System.out.println(population.matingPool[i]);
+			System.out.println(population.populationArray[i] + " " + population.fitness[i]);
+			Thread.sleep(1);
 			
-		//}
-	
+			}
 		
 		}
 		
@@ -62,10 +55,5 @@ public class Phrases {
 		
 		scan.close();		
 		
-		
-		
 	}
-	
-	
-
 }

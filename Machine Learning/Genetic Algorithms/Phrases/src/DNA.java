@@ -3,7 +3,11 @@
 	 
 	 int size, targetL;
 	 String[] populationArr = new String[size];
-	 String target;	 	 
+	 
+	 //Individual[] populationArr = new Individual[size];
+	 
+	 String target;	 
+	 boolean possible = false, first = true;
 	
 	public DNA (Population population) {
 		
@@ -16,9 +20,18 @@
 	
 	static char newChar() {
 		
-		char c = (char) ((int)(Math.random() * 60) + 63);
+		char c = (char) ((int)(Math.random() * 73) + 50);
+		
+		   if(c >= 50 && c <= 59)
+			   c -= 2;
+		
+		   if(c == 61)
+			   c = 44;
+		   
+		   if(c == 60)
+			   c = 33;
 	       
-	       if(c == 63)
+	       if(c == 62)
 	    	   c = 46;
 	       
 	       if(c == 64)
@@ -50,8 +63,11 @@
 		for(int i = 0; i < populationArr.length; i++) {
 			for(int j = 0; j < populationArr[i].length(); j++) {
 		
-               if(populationArr[i].charAt(j) == target.charAt(j))
+               if(populationArr[i].charAt(j) == target.charAt(j)) {
             	   fitness[i]++;
+            	   if(first)
+            		   possible = true;
+               }
                
 			}
 			
@@ -59,6 +75,9 @@
 			fitness[i] /= target.length();
 			
 		}
+		
+		if(first)
+			first = false;
 		
 		return fitness;
 	}
