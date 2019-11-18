@@ -1,7 +1,7 @@
 
 class Population {
 	
-	int populationSize, mating, i, j, k, generations;
+	int populationSize, i, j, generations;
 	double mutationRate;
 	String target;
 	String matingPool[], populationArray[];
@@ -15,16 +15,20 @@ class Population {
 		
 	}
 	
-	void generateMatingPool(boolean first) {
+	void generateMatingPool() {
 		
+		int k = 0, mating = 0;
+		
+	
        for(i = 0; i < fitness.length; i++) {
 			
 			mating += fitness[i];
 			
 		  }
        
-       if (first)
+       
           matingPool = new String[mating];
+		
        
        for (i = 0; i < fitness.length; i++)
        
@@ -34,15 +38,13 @@ class Population {
     	      k++;
     	      
           }
-       
-       k = 0;
 	}
 	
 	void nextGeneration() {
 		
 		
 		
-		for(i = 0; i < populationArray.length; i++) {
+		for(int i = 0; i < populationSize; i++) {
 		
 		int a = (int)(Math.random() * matingPool.length);
 		int b = (int)(Math.random() * matingPool.length);
@@ -51,6 +53,8 @@ class Population {
 		String child = crossOver(parentA, parentB);
 		child = mutate(child);
 		populationArray[i] = child;
+		
+		
 		
 		}
 		
@@ -91,6 +95,26 @@ class Population {
 		}
 		
 		return word;
+		
+	}
+	
+	boolean checkPhrase() {
+		
+		boolean gotIt = false;
+		
+		for(i = 0; i < populationSize; i++) {
+			
+			if(populationArray[i].equals(target)) {
+				
+				gotIt = true;
+				System.out.println("Here it is: " + populationArray[i]);
+				break;
+				
+			}
+			
+		}
+		
+		return gotIt;
 		
 	}
 	

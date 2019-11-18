@@ -5,14 +5,17 @@ public class Program{
 		
 	public static void main(String []args) {
 		
-        String child = "bjhbjhbhj";
+        int[] test = new int[10];
+        int[] test2 = new int[11];
+        
+        for (int i = 0; i <= test.length; i++) {
+        	
+        	test2[i] = test[i];
+        	System.out.println(i);
+        	
+        }
 		
-		for(int i = 0; i < child.length(); i++) {
-			
-			//if(Math.random() <= mutationRate)
-				
-			
-		}
+		
 				
  
 
