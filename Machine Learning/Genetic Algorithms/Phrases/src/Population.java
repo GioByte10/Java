@@ -52,6 +52,8 @@ class Population {
 		String parentB = matingPool[b];
 		String child = crossOver(parentA, parentB);
 		child = mutate(child);
+		
+		
 		populationArray[i] = child;
 		
 		

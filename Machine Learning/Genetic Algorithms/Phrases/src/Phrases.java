@@ -11,7 +11,7 @@ public class Phrases {
 		int i = 0;
 		
 		
-		System.out.println("Machine Learning presents Genetic Algorithms:\n   Phrase by Natural Selection");
+		System.out.println("Machine Learning presents Genetic Algorithms:\n   Phrase by Natural Selection     Mutation Rate = " + mutationP * 100 + "%\n");
 		System.out.println("Enter a population:");
 		int maxPopulation = scan.nextInt();
 		
@@ -45,7 +45,7 @@ public class Phrases {
         for(i = 0; i < population.populationArray.length; i++) {
 			
 			System.out.println(population.populationArray[i] + " " + population.fitness[i]);
-			Thread.sleep(1);
+			//Thread.sleep(1);
 			
 			}
 		
