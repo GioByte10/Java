@@ -5,12 +5,26 @@
 	 String[] populationArr = new String[size];
 	 String target;	 	 
 	
-	public DNA (Population population, String array[]) {
+	public DNA (Population population) {
 		
 	   size = population.populationSize;
-	   populationArr = array;
+	   populationArr = population.populationArray;
 	   targetL = population.target.length();
 	   target = population.target;		
+		
+	}
+	
+	static char newChar() {
+		
+		char c = (char) ((int)(Math.random() * 60) + 63);
+	       
+	       if(c == 63)
+	    	   c = 46;
+	       
+	       if(c == 64)
+	    	   c = 32;
+	       
+	       return c;
 		
 	}
 	
@@ -20,15 +34,10 @@
 			populationArr[i] = "";
 			
 			for(int j = 0; j < targetL; j++) {
-				char c = (char) ((int)(Math.random() * 60) + 63);
+				
 		       
-		       if(c == 63)
-		    	   c = 46;
+		       populationArr[i] += newChar();
 		       
-		       if(c == 64)
-		    	   c = 32;
-		       
-		       populationArr[i] += c;
 		
 			}
 		}	
@@ -43,7 +52,12 @@
 		
                if(populationArr[i].charAt(j) == target.charAt(j))
             	   fitness[i]++;
+               
 			}
+			
+			fitness[i] *= 100;
+			fitness[i] /= target.length();
+			
 		}
 		
 		return fitness;
