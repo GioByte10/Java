@@ -28,7 +28,7 @@ public class MethodsSamplerPlatter {
 			
 			for(i = 0; i < str.length(); i++) {
 				
-				for(j = 0; j < 2; j++) {
+				for(j = 0; j < str.length() * 2; j++) {
 					
 					newString += str.charAt(i);
 					
@@ -48,7 +48,8 @@ public class MethodsSamplerPlatter {
 		int i;
 		boolean palindrome = true;
 		
-		if(str.length() > 3 && str.length() < 15) {
+		if(!(str.length() > 3 && str.length() < 15)) 
+			return false;
 			
 			str = str.toLowerCase();
 			
@@ -75,11 +76,11 @@ public class MethodsSamplerPlatter {
 			return palindrome;
 			
 			
-		}else {
+		
 			
-			return false;
 			
-		}
+			
+		
 		
 	}
 	
