@@ -1,7 +1,7 @@
 
 class Population {
 	
-	int populationSize, i, j, generations;
+	int populationSize, i, j, generations = 1;
 	double mutationRate;
 	String target;
 	String matingPool[], populationArray[];
@@ -42,7 +42,7 @@ class Population {
 	
 	void nextGeneration() {
 		
-		
+		generations++;
 		
 		for(int i = 0; i < populationSize; i++) {
 		
@@ -55,6 +55,7 @@ class Population {
 		
 		
 		populationArray[i] = child;
+		
 		
 		
 		

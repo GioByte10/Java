@@ -51,7 +51,7 @@ public class Phrases {
 		
 		}
 		
-		
+		System.out.println("It took " + population.generations + " Generations");
 		
 		scan.close();		
 		
