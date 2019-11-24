@@ -38,15 +38,16 @@ public class Program{
 		String newS = "";
 		String[] list = new String[300];
 		list[0] = "";
-		int len = 0;
+		int len = 0, i = 0;
 		
-		for(int i = 0; i < words.length(); i++) {
+		for(i = 0; i < words.length(); i++) {
 			
 			if(!(words.charAt(i) == ',' || words.charAt(i) == ' ')) {
 				
 				newS += words.charAt(i);
 				
 			}
+		}
 			
 			for(int j = 0; j < list.length; j++) {
 				
@@ -61,16 +62,27 @@ public class Program{
 						
 					}
 					
+					if(i == newS.length() - 1) {
+						out = true;
+						break;
+					}
+					
+					
 					
 					
 				}
 				
-				list[j] = newS.substring(len, i);
+				if(out)
+				    list[j] = newS.substring(len, newS.length());
+				else
+					list[j] = newS.substring(len, i);
+				
 				len += list[j].length();
 				
 				System.out.println(list[j]);
 				
-				
+				if(out)
+					break;
 				
 			}
 			
