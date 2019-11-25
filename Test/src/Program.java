@@ -1,16 +1,16 @@
-import java.util.ArrayList;
+
 
 public class Program{
 	
 	
 	public static void main (String []args) {
 		
-		boolean out = false;
+boolean out = false;
 		
 		String words = "Absorption, Achromatic, Adaptation, Aerobic, Algae, Alimentary, Allergy, Amoeba, Amphibian, Analogue, Anatomy, Ancestor, Antibody, Appendage, Aquatic, Arboreal, Asexual, Assimilation, Atrophy, Auditory" +
 	            "Backbone, Bacteria, Balance, Barrier, Benign, Biology, Biome, Bisect, Botany, Branch, Breathe" +
 	            "Carnivorous, Catalyst, Cavity, Cell, Chlorophyll, Cholesterol, Chromatic, Chromosome, Cilia, Classification, Cohesive, Collagen, Communicable, Community, Contraction, Control, Convolution, Coronary, Cyclic" +
-	            "Darwin, Deciduous, Decomposition, Dermis, Develop, Dichotomous, Dietary, Differentiation, Diffusion, Digestion, Dinosaur, Discipline, Displacement, Division, DNA, Dominant, Dormant" +
+	            "Darwin, Deciduous, Decomposition, Dermis, Develop, Dichotomous, Dietary, Differentiation, Diffusion, Digestion, Dinosaur, Discipline, Displacement, Division, Dna, Dominant, Dormant" +
 	            "Ecology, Ecosystem, Ectoplasm, Edema, Embryo, Endangered, Endemic, Endoskeleton, Endothermic, Energy, Environment, Enzyme, Epidermis, Erosion, Essential, Estrogen, Evolution, Exoskeleton, Exothermic, Extermination, Extinct" +
 	            "Factor, Feedback, Fertilization, Fetus, Fibrillation, Filament, Fish, Fission, Flower, Food chain, Fossil, Function" +
 	            "Gamete, Gaseous, Gastrin, Genetics, Genome, Genus, Germ, Gestation, Gills, Grafting, Greenhouse effect, Growth" +
@@ -36,11 +36,11 @@ public class Program{
 
 		
 		String newS = "";
-		String[] list = new String[300];
-		list[0] = "";
+		String[] list = new String[500];
+		
 		int len = 0, i = 0;
 		
-		for(i = 0; i < words.length(); i++) {
+for(i = 0; i < words.length(); i++) {
 			
 			if(!(words.charAt(i) == ',' || words.charAt(i) == ' ')) {
 				
@@ -56,7 +56,7 @@ public class Program{
 					
 					
 					if(Character.isUpperCase(newS.charAt(i))) {
-						System.out.println(i);
+						//System.out.println(i);
 						break;
 						
 						
@@ -79,10 +79,16 @@ public class Program{
 				
 				len += list[j].length();
 				
-				System.out.println(list[j]);
+				//System.out.println(list[j]);
 				
 				if(out)
 					break;
+				
+			}
+			
+			for(i = 0; list[i] != null; i++) {
+				
+				System.out.println(i + "   " + list[i]);
 				
 			}
 			
@@ -90,9 +96,8 @@ public class Program{
 		}
 		
 		
-		System.out.println(newS);
+		
 		
 		
 	}
 	
-}
