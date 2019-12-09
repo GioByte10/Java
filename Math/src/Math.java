@@ -1,10 +1,11 @@
 import java.util.Scanner;
+import java.math.*;
 
 public class Math {  
  
 public static void main(String[] args) {  
 	
-
+    int x = (int) Math.pow(3, 3);
     
 	Scanner scan = new Scanner(System.in);
 	
