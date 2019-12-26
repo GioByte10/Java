@@ -1,4 +1,5 @@
 
+
 class Population {
 	
 	int populationSize, i, j, generations = 1;
@@ -75,6 +76,7 @@ class Population {
 				child += parentA.charAt(i);
 			else
 				child += parentB.charAt(i);
+			
 			
 			
 		}
