@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Hangman</string>
+
+    <string name="Length">#Letters: </string>
+    <string name="Guessed">Guessed: </string>
+    <string name="Incorrect">Wrong: </string>
+    <string name="_"></string>
+    <string name="new1">+</string>
+
+    <string name="Hangman">\n|     \n|  \n|  </string>
+
+    <string name="A">A</string>
+    <string name="B">B</string>
+    <string name="C">C</string>
+    <string name="D">D</string>
+    <string name="E">E</string>
+    <string name="F">F</string>
+    <string name="G">G</string>
+    <string name="H">H</string>
+    <string name="I">I</string>
+    <string name="J">J</string>
+    <string name="K">K</string>
+    <string name="L">L</string>
+    <string name="M">M</string>
+    <string name="N">N</string>
+    <string name="O">O</string>
+    <string name="P">P</string>
+    <string name="Q">Q</string>
+    <string name="R">R</string>
+    <string name="S">S</string>
+    <string name="T">T</string>
+    <string name="U">U</string>
+    <string name="V">V</string>
+    <string name="W">W</string>
+    <string name="X">X</string>
+    <string name="Y">Y</string>
+    <string name="Z">Z</string>
+    <string name="a">?</string>
+    <string name="b">-</string>
+
+</resources>

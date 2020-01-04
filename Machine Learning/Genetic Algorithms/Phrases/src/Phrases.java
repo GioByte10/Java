@@ -7,7 +7,7 @@ public class Phrases {
 		Scanner scan = new Scanner(System.in);
 		
 		
-		double mutationP = 0.01;
+		double mutationP = 0.1;
 		int i = 0;
 		
 		
