@@ -18,7 +18,7 @@ class Quiz {
 	
 	public static void addQuestion(String question) {
 		
-		getQuestions().add(question);
+		questions.add(question);
 		
 	}
 
