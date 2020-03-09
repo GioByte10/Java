@@ -26,7 +26,7 @@ public class ArrayList1 {
 		}
 		
 		
-		System.out.println(Main);
+		
 		
 		for(String b: Main){
 		if(b.contains("a")){
