@@ -7,7 +7,7 @@ public class Phrases {
 		Scanner scan = new Scanner(System.in);
 		
 		
-		double mutationP = 0.1;
+		double mutationP = 0.01;
 		int i = 0;
 		
 		
@@ -45,7 +45,7 @@ public class Phrases {
         for(i = 0; i < population.populationArray.length; i++) {
 			
 			System.out.println(population.populationArray[i] + " " + population.fitness[i]);
-			//Thread.sleep(1);
+			
 			
 			}
 		

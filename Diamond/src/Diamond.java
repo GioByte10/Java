@@ -1,11 +1,23 @@
-
+import java.util.ArrayList;
+import java.util.List;
 public class Diamond {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("    *\n   ***\n  *****\n *******\n*********");
-		System.out.print(" *******\n  *****\n   ***\n    *");
-		
-	}
+		List<String> students = new ArrayList<String>();
 
+		students.add("Alex");
+		students.add("Bob");
+		students.add("Carl");
+
+		for (int k=0; k<students.size(); k++) {
+		System.out.print(students.set(k,"Alex") + " ");
+		}
+		System.out.println();
+
+		for (String str : students) {
+		System.out.print(str + " ");
+		}
+
+}
 }
