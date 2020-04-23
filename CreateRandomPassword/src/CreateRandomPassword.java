@@ -22,6 +22,8 @@ public class CreateRandomPassword {
 		System.out.println("Enter the number of symbols: ");
 		symbols = scan.nextInt();		
 		
+		scan.close();
+		
 		generatePassword(generateCharacters(lowercase, uppercase, numbers, symbols));
 			
 	}
