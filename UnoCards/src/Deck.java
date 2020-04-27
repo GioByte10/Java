@@ -4,7 +4,7 @@ public class Deck {
 	
 	private ArrayList<Card> cards = new ArrayList<Card>();
 	private String[] descriptions = {"Skip", "Reverse", "Draw Two", "Wild"};
-	private String[] colors = {"Red", "Yellow",	"Green", "Blue"};
+	private String[] colors = {"Red", "Yellow", "Green", "Blue"};
 	
 	public Deck() {
 		
@@ -25,7 +25,6 @@ public class Deck {
 		}
 		
 		descriptions[3] = "Draw Four";
-	
 		
 		for(int i = 0; i < 4; i++) {
 			
@@ -69,7 +68,5 @@ public class Deck {
 			System.out.println((i + 1) + ".- " + cards.get(i).toString());
 			
 		}
-		
 	}
-
 }

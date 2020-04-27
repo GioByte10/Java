@@ -1,8 +1,15 @@
+import java.awt.Color;
+import java.util.ArrayList;
 
-public class T {
+public class Slave {
 	
-	public static void main (String[] args) {
-		System.out.println("HI");
+	public Slave(Color black) {
+		// TODO Auto-generated constructor stub
 	}
 
+	public static void main (String[] args) {
+
+		Slave nigga = new Slave(Color.BLACK, 60Kg, 1.70m)
+		
+	}
 }
