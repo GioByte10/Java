@@ -30,6 +30,7 @@ public class AccessTextFile {
 				scan.nextLine();
 				country = scan.nextLine();
 				countries.add(country);
+				System.out.println("" + countries.size());
 				writeFile(myWriter, file, countries);
 				printFile(file, countries);
 			}
@@ -55,8 +56,9 @@ public class AccessTextFile {
 		
 		Scanner myReader = new Scanner(file);
 	    int i = 0;
+	    System.out.println("k");
 		
-		while (myReader.hasNextLine()){
+		while(myReader.hasNextLine()){
 			
 			String country = myReader.nextLine();
 			System.out.println(country);
@@ -71,7 +73,7 @@ public class AccessTextFile {
 	
 	static void writeFile(FileWriter wFile, File file, ArrayList<String> countries) throws IOException {
 		
-		file.createNewFile();
+		//file.createNewFile();
 		String text = "";
 		
 		for(int i = 0; i < countries.size(); i++) {
