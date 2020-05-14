@@ -1,5 +1,4 @@
-public class FrogSimulation
-{
+public class FrogSimulation{
 /** Distance, in inches, from the starting position to the goal. */
 private int goalDistance;
 /** Maximum number of hops allowed to reach the goal. */
@@ -8,7 +7,7 @@ private int maxHops;
 * position to the goal, and numHops is the maximum number of hops allowed to reach the goal.
 * Precondition: dist > 0; numHops > 0
 */
-public FrogSimulation(int dist, int numHops)
+public FrogSimualtion(int dist, int numHops)
 {
 goalDistance = dist;
 maxHops = numHops;
@@ -54,6 +53,7 @@ public double runSimulations(int num){
 	}
 	
 	proportion = (double) (countTrue * 1.0 / num);
+	return proportion;
 	
 }
 }
