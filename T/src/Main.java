@@ -6,12 +6,11 @@ public class Main {
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		
-		final File f = new File(Main.class.getProtectionDomain().getCodeSource().getLocation().getPath());	
+		int countTrue = 100;
+		int num = 400;
+		double proportion;
 		
-		Scanner myReader = new Scanner(f);
-		
-		
-		
-		myReader.close();
+		proportion = (double) (countTrue * 1.0 / num);
+		System.out.println(proportion);
 	}
 }
